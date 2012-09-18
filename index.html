@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+        <script src="combustivel.js"></script>
+    </head>
+
+    <body ng-controller="CombustivelCtrl">
+
+        <h1>Qual combust&iacute;vel escolher?</h1>
+        {{relacao}}
+        <table>
+            <thead>
+                <th>Rendimento Etanol (km/L)</th>
+                <th>Pre&ccedil;o Etanol (R$)</th>
+                <th>Rendimento Gasolina (km/L)</th>
+                <th>Pre&ccedil;o Gasolina (R$)</th>
+            </thead>
+            <tbody>
+                <td><input type="number" ng-model="rendimentoEtanol" ng-change="calcularRendimento()" placeholder="km/L"></td>
+                <td><input type="number" ng-model="precoEtanol" ng-change="calcularRendimento()" placeholder="R$"></td>
+                <td><input type="number" ng-model="rendimentoGasolina" ng-change="calcularRendimento()" placeholder="km/L"></td>
+                <td><input type="number" ng-model="precoGasolina" ng-change="calcularRendimento()" placeholder="R$"></td>
+            </tbody>
+        </table>
+
+        <p ng-show="combustivelVantajoso">&Eacute; mais vantajoso abastecer com <strong>{{combustivelVantajoso}}</strong></p>
+        <p ng-hide="combustivelVantajoso">Preencha todos os campos para iniciar o c&aacute;lculo.</p>
+
+    </body>
+</html>
