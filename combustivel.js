@@ -9,8 +9,6 @@ function CombustivelCtrl($scope) {
 
             var relacaoRendimento = $scope.rendimentoEtanol / $scope.rendimentoGasolina;
 
-            $scope.relacao = relacaoRendimento;
-
             if ($scope.precoEtanol < $scope.precoGasolina * relacaoRendimento) {
                 $scope.combustivelVantajoso = 'ETANOL';
             } else {
