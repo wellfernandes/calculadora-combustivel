@@ -3,12 +3,15 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
         <script src="js/combustivel.js"></script>
+        <script src="js/bootstrap.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body ng-controller="CombustivelCtrl" class="container">
 
         <h1>Qual combust&iacute;vel escolher?</h1>
+
+        <p>Com a populariza&ccedil;&atilde;o dos carros Flex, na hora de abastecer temos que decidir qual combust&iacute;vel &eacute; mais vantajoso financeiramente. Para isso, preencha os dados abaixo e saiba qual o combust&iacute;vel vai fazer voc&ecirc; economizar mais.</p>
 
         <table>
             <thead>
@@ -28,5 +31,58 @@
         <p ng-show="combustivelVantajoso">&Eacute; mais vantajoso abastecer com <strong>{{combustivelVantajoso}}</strong></p>
         <p ng-hide="combustivelVantajoso">Preencha todos os campos para iniciar o c&aacute;lculo.</p>
 
+        <hr>
+
+        <div class="row">
+            <div class="span10 tabbable tabs-left">
+                <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
+                    <li class="active"><a href="#rendimento" data-toggle="tab">Calculando o rendimento</a></li>
+                    <li><a href="#melhorCombustivel" data-toggle="tab">Escolhendo o melhor combust&iacute;vel</a></li>
+                    <li><a href="#dicasEconomia" data-toggle="tab">Economizando combust&iacute;vel</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="rendimento">
+                        <p>O c&aacute;lculo do rendimento do carro &eacute; muito simples, basta seguir os seguintes passos:</p>
+                        <ol>
+                            <li>Quando o tanque do carro estiver quase vazio (entrando na reserva), completar o tanque do carro com o combust&iacute;vel que voc&ecirc; quer descobrir o rendimento;</li>
+                            <li>No posto mesmo, zerar o od&ocirc;metro do carro (caso o seu carro n&atilde;o permita zerar o od&ocirc;metro, anote a quilometragem atual do carro);</li>
+                            <li>Andar com o carro at&eacute; o tanque estiver quase vazio novamente, completar o tanque;</li>
+                            <li>Anotar da bomba do posto a quantidade de litros de combust&iacute;vel que foi utilizada para completar o tanque novamente;</li>
+                            <li>Anotar o valor do od&ocirc;metro, que indica quantidade de quilometros que foram rodados (se o seu carro n&atilde;o zerar o od&ocirc;metro, anotar a quilometragem atual e subtra&iacute;-la da quilometragem anotada anteriormente no passo 2);</li>
+                            <li>Fazer o seguinte c&aacute;lculo:<br>
+                                <strong>rendimento = quilometragem_percorrida / quantidade_de_litros</strong></li>
+                            <li>Este valor &eacute; o rendimento do seu carro em km/L para este combust&iacute;vel</li>
+                        </ol>
+ 
+                        <p>O ideal &eacute; que voc&ecirc; calcule o rendimento com o mesmo combust&iacute;vel pelo menos por tr&ecirc;s vezes e depois calcule a m&eacute;dia dos valores para ter uma ideia melhor do consumo do seu carro.</p>
+                    </div>
+                    <div class="tab-pane" id="melhorCombustivel">
+                        <p>Howdy, I'm in Section B.</p>
+                    </div>
+                    <div class="tab-pane" id="dicasEconomia">
+                        <p>What up girl, this is Section C.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="span2">
+                <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-9138703013890172";
+                /* Calculadora Combustível */
+                google_ad_slot = "7306021027";
+                google_ad_width = 120;
+                google_ad_height = 240;
+                //-->
+                </script>
+                <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('#tabs').tab();
+            });
+        </script> 
     </body>
 </html>
