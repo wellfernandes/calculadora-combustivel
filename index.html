@@ -1,10 +1,15 @@
 <!doctype html>
 <html ng-app>
     <head>
+        <title>&Aacute;lcool ou Gasolina? Que combust&iacute;vel escolher?</title>
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
         <script src="js/combustivel.js"></script>
         <script src="js/bootstrap.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="canonical" href="http://rennerocha.com/calculadoras/combustivel/" />
+
     </head>
 
     <body ng-controller="CombustivelCtrl" class="container">
@@ -30,6 +35,8 @@
 
         <p ng-show="combustivelVantajoso">&Eacute; mais vantajoso abastecer com <strong>{{combustivelVantajoso}}</strong></p>
         <p ng-hide="combustivelVantajoso">Preencha todos os campos para iniciar o c&aacute;lculo.</p>
+
+      <g:plusone></g:plusone>
 
         <hr>
 
@@ -94,6 +101,14 @@
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+        <script type="text/javascript">
+          (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
           })();
         </script>
 
